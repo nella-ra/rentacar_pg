@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RentaCar Podgorica</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+            color: #333;
+        }
+        header {
+            background-color: #007bff;
+            color: #fff;
+            padding: 1.5rem 0;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5rem;
+        }
+        header p {
+            margin: 0;
+            font-size: 1.2rem;
+        }
+        .container {
+            padding: 2rem;
+            text-align: center;
+        }
+        .reservation-form {
+            max-width: 500px;
+            margin: 2rem auto;
+            padding: 1.5rem;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+            background-color: #fff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .reservation-form input, .reservation-form select, .reservation-form button {
+            width: 100%;
+            padding: 0.8rem;
+            margin: 0.5rem 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+        .reservation-form button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        .reservation-form button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>RentaCar Podgorica</h1>
+        <p>Rezervišite svoj automobil brzo i lako!</p>
+    </header>
+    <div class="container" id="reservation">
+        <h2>Rezervišite automobil</h2>
+        <form class="reservation-form" action="/reserve" method="POST">
+            <label for="vehicle">Izaberite automobil:</label>
+            <select id="vehicle" name="vehicle" required>
+                <option value="Volkswagen Golf">Volkswagen Golf</option>
+                <option value="BMW X5">BMW X5</option>
+                <option value="Renault Clio">Renault Clio</option>
+            </select>
+            <label for="name">Vaše ime:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="phone">Broj telefona (za Viber obaveštenje):</label>
+            <input type="tel" id="phone" name="phone" required>
+            <label for="date">Datum preuzimanja:</label>
+            <input type="date" id="date" name="date" required>
+            <label for="time">Vreme preuzimanja:</label>
+            <input type="time" id="time" name="time" required>
+            <button type="submit">Rezerviši</button>
+        </form>
+    </div>
+    <footer>
+        <p>© 2024 RentaCar Podgorica - Sva prava zadržana.</p>
+    </footer>
+</body>
+</html>
